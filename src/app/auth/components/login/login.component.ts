@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
     {
       id: 'email',
       type: 'email',
+      label: this._prefix + 'email.label',
+      icon: 'account_circle',
       validators: ['required', 'email'],
       errors: {
         required: 'required',
@@ -25,6 +27,8 @@ export class LoginComponent implements OnInit {
     {
       id: 'password',
       type: 'password',
+      label: this._prefix + 'password.label',
+      icon: 'vpn_key',
       validators: ['required', 'pattern', 'minLength'],
       minLength: 6,
       // pattern: '^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})',
@@ -43,6 +47,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.controls);
     this.form = this._formBuilder.group(this._formService.configureControls(this.controls, this._prefix));
   }
 

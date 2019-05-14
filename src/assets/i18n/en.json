@@ -1,12 +1,11 @@
 {
   "loading": "Loading",
-  "sidebar": {
+  "header": {
     "home": "Home",
     "mock": "Mock",
     "back-http": "Back http",
     "static-back-http": "Static `Back http`",
-    "async-http": "http async",
-    "nonexistent": "404: Page not found",
+    "nonexistent": "404",
     "logout": "Log Out"
   },
   "auth": {

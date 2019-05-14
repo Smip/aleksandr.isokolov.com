@@ -2,6 +2,7 @@ export interface ICustomControl {
   id: string;
   type?: string;
   label?: string;
+  icon?: string;
   value?: string;
   errors?: ICustomErrors;
   pattern?: string;

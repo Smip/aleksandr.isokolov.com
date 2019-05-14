@@ -4,10 +4,11 @@ import { TransferHttpModule } from '@gorniv/ngx-universal';
 
 import { LayoutsModule } from './layouts/layouts.module';
 import { SharedMetaModule } from './shared-meta';
-import { SharedFormsModule } from '@shared/shared-forms/shared-forms.module';
+import { NgxMaterialize } from '@smip/ngx-materialize';
 
 @NgModule({
-  exports: [LayoutsModule, SharedMetaModule, TransferHttpModule],
+  // imports: [NgxMaterialize],
+  exports: [LayoutsModule, SharedMetaModule, TransferHttpModule, NgxMaterialize],
   providers: [],
 })
 export class SharedModule {

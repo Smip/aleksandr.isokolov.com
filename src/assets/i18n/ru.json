@@ -1,12 +1,11 @@
 {
   "loading": "Загрузка",
-  "sidebar": {
+  "header": {
     "home": "Главная",
     "mock": "Мокап",
     "back-http": "Http на бэк",
-    "static-back-http": "Статическая `Http на бэк`",
-    "async-http": "http async",
-    "nonexistent": "404: Страница не найдена",
+    "static-back-http": "Стат. `Http на бэк`",
+    "nonexistent": "404",
     "logout": "Выйти"
   },
   "auth": {
@@ -79,7 +78,8 @@
     "original-url": "Оригинальный URL:"
   },
   "not-found": {
-    "title": "Не найдено"
+    "title": "Не найдено",
+    "text": "Не найдено"
   },
   "buttons": {
     "login": "Войти",

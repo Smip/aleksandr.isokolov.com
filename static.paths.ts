@@ -1,1 +1,1 @@
-export const ROUTES = ['/static/back'];
+export const ROUTES = ['/static/back', '/home', '/mock'];

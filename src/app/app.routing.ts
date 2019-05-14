@@ -15,15 +15,13 @@ const routes: Routes = [
   {
     path: '',
     component: WrapperComponent,
-    canActivateChild: [MetaGuard, AuthGuard],
+    canActivateChild: [MetaGuard],
     children: [
       { path: 'home', loadChildren: './home/home.module#HomeModule' },
       {
         path: 'mock',
         loadChildren: './mock-server-browser/mock-server-browser.module#MockServerBrowserModule',
       },
-      { path: 'back', loadChildren: './transfer-back/transfer-back.module#TransferBackModule' },
-      { path: 'async', loadChildren: './http-async/http-async.module#HttpAsyncModule' },
     ],
   },
   {

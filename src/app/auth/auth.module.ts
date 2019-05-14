@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutes } from './auth.routing';
 import { AuthComponent } from './auth.component';
 import { LayoutsModule } from '@shared/layouts/layouts.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { LayoutsModule } from '@shared/layouts/layouts.module';
   imports: [
     CommonModule,
     AuthRoutes,
-    LayoutsModule
+    LayoutsModule,
+    TranslateModule
   ]
 })
 export class AuthModule {

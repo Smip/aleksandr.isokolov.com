@@ -1,19 +1,27 @@
+<h1>{{"auth.login.title"| translate}}</h1>
 <div *ngIf="form">
   <form class="form-group" [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
-    <div class="form-control p-0" *ngFor="let control of controls">
-      <label [for]="control.id"
-             class="p-0 p-t-1 p-b-1 m-0 d-f a-i-c z-1 sz-l-12">
-        {{control.label | translate}}
-        <span class="asterisk">* </span>
-      </label>
-      <input [type]="control.type"
-             class="p-1 p-r-8 bg-trans z-2 sz-12"
-             [formControlName]="control.id"
-             [id]="control.id"/>
-      <!--<span class="validation error"></span>-->
-    </div>
-    <div class="form-submit m-t-2">
-      <button type="submit" [disabled]="form.invalid">{{button | translate}}</button>
+    <div class="row">
+      <div class="input-field col s12" *ngFor="let control of controls">
+        <i class="material-icons prefix" *ngIf="control.icon">{{control.icon}}</i>
+        <input
+          [id]="control.id"
+          [type]="control.type"
+          [formControlName]="control.id"
+          class="validate"
+        >
+        <label [for]="control.id">{{control.label | translate}}</label>
+      </div>
+      <div class="input-field col s12">
+        <button
+          class="btn waves-effect waves-light green right"
+          type="submit"
+          [disabled]="!form.valid"
+        >
+          {{button | translate}}
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
     </div>
   </form>
 </div>

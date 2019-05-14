@@ -4,13 +4,13 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { HeaderComponent } from './header/header.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
+import { NgxMaterialize } from '@smip/ngx-materialize';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, TranslateModule],
-  declarations: [FooterComponent, SidebarComponent, ToolbarComponent, WrapperComponent],
-  exports: [FooterComponent, SidebarComponent, ToolbarComponent, WrapperComponent],
+  imports: [CommonModule, RouterModule, TranslateModule, NgxMaterialize],
+  declarations: [FooterComponent, HeaderComponent, WrapperComponent],
+  exports: [FooterComponent, HeaderComponent, WrapperComponent],
 })
 export class LayoutsModule {}

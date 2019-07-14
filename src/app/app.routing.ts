@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'auth',
-    loadChildren: './auth/auth.module#AuthModule',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
     canLoad: [UnAuthGuard],
   },
   {
@@ -17,10 +17,10 @@ const routes: Routes = [
     component: WrapperComponent,
     canActivateChild: [MetaGuard],
     children: [
-      { path: 'home', loadChildren: './home/home.module#HomeModule' },
+      { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
       {
         path: 'mock',
-        loadChildren: './mock-server-browser/mock-server-browser.module#MockServerBrowserModule',
+        loadChildren: () => import('./mock-server-browser/mock-server-browser.module').then(m => m.MockServerBrowserModule),
       },
     ],
   },
@@ -31,7 +31,7 @@ const routes: Routes = [
     children: [
       {
         path: 'static/back',
-        loadChildren: './transfer-back/transfer-back.module#TransferBackModule',
+        loadChildren: () => import('./transfer-back/transfer-back.module').then(m => m.TransferBackModule),
       },
     ],
   },
@@ -39,7 +39,7 @@ const routes: Routes = [
     path: '',
     component: WrapperComponent,
     canActivateChild: [MetaGuard],
-    children: [{ path: '**', loadChildren: './not-found/not-found.module#NotFoundModule' }],
+    children: [{ path: '**', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule) }],
   },
 ];
 // must use {initialNavigation: 'enabled'}) - for one load page, without reload

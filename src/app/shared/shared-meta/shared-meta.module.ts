@@ -8,11 +8,11 @@ export function metaFactory(translate: TranslateService): MetaLoader {
     callback: (key: string): Observable<string | Object> => translate.get(key),
     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
     pageTitleSeparator: ' | ',
-    applicationName: 'App Universal',
+    applicationName: 'Aleksandr Sokolov',
     defaults: {
-      title: 'Default page title',
-      description: 'Default description',
-      'og:site_name': 'App site Universal',
+      title: 'Aleksandr Sokolov',
+      description: 'Angular developer',
+      'og:site_name': 'Aleksandr Sokolov',
       'og:type': 'website',
       'og:locale': 'ru_RU',
       'og:locale:alternate': [

@@ -1,69 +1,43 @@
-<nav class="nav-extended">
+<nav>
   <div class="nav-wrapper">
-    <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <a href="/" class="brand-logo">Logo</a>
-    <ul class="left hide-on-med-and-down">
-      <li *ngFor="let item of links">
-        <a [routerLink]="[item.link]" [routerLinkActive]="['active']">
-          <i class="material-icons left">{{ item.icon }}</i>
-          {{ item.name | translate }}
-        </a>
-      </li>
-    </ul>
-    <ul class="right hide-on-med-and-down">
-      <li>
-        <a href="#!" data-target="dropdown-lang" [mDropdown]="{container:'body', constrainWidth: false, coverTrigger: false, alignment: 'right'}">
-          <i class="material-icons left">language</i>
-          Language {{currentLang}}
-          <i class="material-icons right">arrow_drop_down</i>
-        </a>
-      </li>
-      <li>
-        <a href="#!" data-target="user-menu" [mDropdown]="{container:'body', constrainWidth: false, coverTrigger: false, alignment: 'right'}">
-          <i class="material-icons left">account_circle</i>
-          User name
-          <i class="material-icons right">arrow_drop_down</i>
-        </a>
-      </li>
-    </ul>
+    <div class="container">
+      <a href="/" class="brand-logo">
+        <teximate [text]="'Aleksandr Sokolov'" [enter]="enterAnimation"></teximate>
+      </a>
+      <div class="right-menu right">
+        <ul>
+          <!--<li *ngFor="let lang of langList$ | async" [ngClass]="{'active':lang.code === currentLang}">-->
+          <!--<a (click)="changeLang(lang.code)">-->
+          <!--{{ lang.code }}-->
+          <!--</a>-->
+          <!--</li>-->
+          <li>
+            <a href="#!" data-target="emailModal" class="modal-trigger">
+              <img src="../../../../assets/img/email.svg">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/soko1off/" target="_blank">
+              <img src="../../../../assets/img/linkedin.svg">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Smip" target="_blank">
+              <img src="../../../../assets/img/github.svg">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>
-<ul id="user-menu" class="dropdown-content">
-  <li><a href="#!">1</a></li>
-  <li class="divider"></li>
-  <li>
-    <a>
-      <i class="material-icons left">exit_to_app</i> Exit
-    </a>
-  </li>
-</ul>
 
-<ul id="dropdown-lang" class="dropdown-content">
-  <li *ngFor="let lang of langList$ | async" [ngClass]="{'active':lang.code === currentLang}">
-    <a (click)="changeLang(lang.code)">{{ lang.name }}</a>
-  </li>
-</ul>
-
-<ul class="sidenav" id="mobile-menu" mSidenav>
-  <li>
-    <div class="user-view">
-      <div class="background">
-        <img src="https://materializecss.com/images/office.jpg">
-      </div>
-      <a href="#name"><span class="white-text name">User name</span></a>
-      <a href="#email"><span class="white-text email">User email</span></a>
-      <a><span class="white-text email"><i class="material-icons left">exit_to_app</i> Exit</span></a>
-    </div>
-  </li>
-
-  <li class="no-padding">
-    <ul class="collapsible collapsible-accordion" mCollapsible>
-      <li>
-        <a class="sidenav-close" href="#">
-          <i class="material-icons left">local_phone</i> 1
-        </a>
-      </li>
-    </ul>
-  </li>
-
-</ul>
+<!-- Modal Structure -->
+<div id="emailModal" class="modal" mModal>
+  <div class="modal-content">
+    <h4 class="center-align">sokolov.aleksandr@yahoo.com</h4>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>

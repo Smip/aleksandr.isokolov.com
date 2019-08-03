@@ -7,9 +7,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
 import { NgxMaterialize } from '@smip/ngx-materialize';
+import { TeximateModule } from 'ngx-teximate';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, TranslateModule, NgxMaterialize],
+  imports: [CommonModule, RouterModule, TranslateModule, NgxMaterialize, TeximateModule],
   declarations: [FooterComponent, HeaderComponent, WrapperComponent],
   exports: [FooterComponent, HeaderComponent, WrapperComponent],
 })

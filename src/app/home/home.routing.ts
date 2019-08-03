@@ -1,5 +1,5 @@
 import { HomeComponent } from './home.component';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -7,8 +7,8 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       meta: {
-        title: 'home.title',
-        description: 'home.text',
+        title: 'Aleksandr Sokolov',
+        description: 'Angular developer',
         override: true,
       },
     },

@@ -3,4 +3,88 @@ nav .brand-logo {
   margin-right: 50px;
   position: relative;
   float: left;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: $medium-screen) {
+  nav {
+    line-height: 50px;
+    .brand-logo {
+      margin-left: 0;
+      margin-right: 0;
+      min-width: 100%;
+    }
+  }
+  .right-menu {
+    position: relative;
+    left: -50%;
+    text-align: left;
+    ul {
+      list-style: none;
+      position: relative;
+      left: 50%;
+      li {
+        float: left;
+        position: relative;
+        a {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+  nav .brand-logo {
+    font-size: 1.8rem;
+  }
+}
+
+nav ul li {
+  &.active {
+    background-color: initial !important;
+    a {
+      font-weight: 600;
+      &:hover {
+        background-color: initial !important;
+      }
+    }
+  }
+  &:not(.active) {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  a {
+    padding: 0 10px;
+    &:hover {
+      background-color: initial !important;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+  #emailModal {
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#emailModal {
+  h4 {
+    word-break: break-all;
+  }
 }

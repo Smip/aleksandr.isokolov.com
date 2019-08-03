@@ -1,3 +1,15 @@
+$primary-color: #ffffff;
+$navbar-font-color: #444444;
+$navbar-height: 100px;
+$navbar-line-height: $navbar-height;
+$navbar-height-mobile: $navbar-height;
+$navbar-line-height-mobile: 50px;
+
+//$footer-font-color;
+$footer-bg-color: #444444;
+//$footer-copyright-font-color;
+$footer-copyright-bg-color: #222222;
+
 $color-primary: #3f51b5;
 $color-primary-50: rgba(63, 81, 181, 0.5);
 
@@ -12,3 +24,4 @@ $transition-all:  all 0.15s ease-out;
 
 $border-color: #424242;
 $grey: #e0e0e0;
+

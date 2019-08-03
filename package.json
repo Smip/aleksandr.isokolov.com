@@ -54,6 +54,8 @@
     "cookie-parser": "1.4.4",
     "core-js": "3.1.4",
     "materialize-css": "^1.0.0",
+    "ng-animate": "^0.3.4",
+    "ngx-teximate": "^0.3.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "6.5.2",
     "rxjs-tslint": "0.1.7",

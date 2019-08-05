@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -13,5 +13,8 @@ import { TeximateModule } from 'ngx-teximate';
   imports: [CommonModule, RouterModule, TranslateModule, NgxMaterialize, TeximateModule],
   declarations: [FooterComponent, HeaderComponent, WrapperComponent],
   exports: [FooterComponent, HeaderComponent, WrapperComponent],
+  schemas: [
+    NO_ERRORS_SCHEMA,
+  ],
 })
 export class LayoutsModule {}

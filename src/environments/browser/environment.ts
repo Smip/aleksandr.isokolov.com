@@ -7,6 +7,6 @@ export const environment = {
   production: false,
   isServer: false,
   // for prerender
-  host: 'http://localhost:4000',
-  apiURL: 'http://aleksandr.isokolov.com/api/',
+  host: 'https://localhost:4000',
+  apiURL: 'https://aleksandr.isokolov.com/api/',
 };

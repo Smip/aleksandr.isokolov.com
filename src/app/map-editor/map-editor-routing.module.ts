@@ -1,7 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { MapEditorComponent } from './map-editor.component';
 import { MapSelectorComponent } from './map-selector/map-selector.component';
-import { MapEditComponent } from './map-edit/map-edit.component';
 
 const routes: Routes = [
   {
@@ -21,7 +20,8 @@ const routes: Routes = [
       },
       {
         path: ':slug',
-        component: MapEditComponent,
+        loadChildren: () => import('./map-edit/map-edit.module').then(m => m.MapEditModule),
+        // component: MapEditComponent,
         data: {
           meta: {
             title: 'Map editor based on leaflet & angular',

@@ -1,0 +1,42 @@
+@import '~leaflet/dist/leaflet.css';
+@import '~leaflet-draw/dist/leaflet.draw.css';
+
+.search-container {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 0 10px;
+  width: 200px;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  .search-input-container {
+    padding: 0 30px 0 0;
+    //border-bottom: 1px solid #eee;
+  }
+  .collection {
+    border: none;
+    .collection-item {
+      padding: 10px 0;
+      position: relative;
+    }
+  }
+  input {
+    border-bottom: none !important;
+    margin: 0 !important;
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  button {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    padding: 0 10px;
+    border-radius: 25px;
+  }
+}
+
+.leaflet-touch .leaflet-bar, .leaflet-touch .leaflet-control-layers {
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+

@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="card-panel">
+    <div class="row">
+      <div class="col m6 s12">
+        <h5>Map editor based on leaflet & Angular 8</h5>
+        <p>Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps. Weighing just
+          about 38 KB of JS, it has all the mapping features most developers ever need.</p>
+        <p>Used libs:</p>
+        <ul>
+          <li><a href="https://github.com/Leaflet/Leaflet">leaflet</a></li>
+          <li><a href="https://github.com/Leaflet/Leaflet.draw">leaflet-draw</a></li>
+          <li><a href="https://github.com/Asymmetrik/ngx-leaflet">@asymmetrik/ngx-leaflet</a></li>
+          <li><a href="https://github.com/Asymmetrik/ngx-leaflet-draw">@asymmetrik/ngx-leaflet-draw</a></li>
+        </ul>
+      </div>
+      <div class="col m6 s12">
+        <div class="row">
+          <div class="col s12">
+            <h4>New map</h4>
+          </div>
+          <form
+            [formGroup]="form"
+            (ngSubmit)="onSubmit()"
+            *ngIf="form"
+          >
+            <div class="input-field col s6 m8">
+              <input id="last_name" type="text" class="validate" formControlName="name">
+              <label for="last_name">Give some name of map</label>
+              <span
+                class="helper-text red-text"
+                *ngIf="form.get('name').invalid && form.get('name').touched"
+              >
+                <span *ngIf="form.get('name')['errors']['required']">
+                  Required field
+                </span>
+                <span *ngIf="form.get('name')['errors']['minlength']">
+                  Minimum length required {{ form.get('name')['errors']['minlength']['requiredLength'] }} characters
+                </span>
+                <span *ngIf="form.get('name')['errors']['maxlength']">
+                  Maximum length required {{ form.get('name')['errors']['maxlength']['requiredLength'] }} characters
+                </span>
+              </span>
+            </div>
+            <div class="input-field col s6 m4">
+              <button class="btn waves-effect waves-light grey darken-4" type="submit">
+                Create
+                <i class="material-icons right">add</i>
+              </button>
+            </div>
+          </form>
+          <div class="col s12">
+            <h4>Open map</h4>
+          </div>
+          <div class="col s12">
+            <div class="collection">
+              <a [routerLink]="map.slug" class="collection-item"
+                 *ngFor="let map of maps | paginate: { itemsPerPage: 10, currentPage: page, totalItems: total }">
+                {{map.name}} ({{map.features_count}} areas)
+                <span class="secondary-content">
+                  {{map.created_at|moment}}
+                </span>
+                <div class="clearfix"></div>
+              </a>
+            </div>
+            <div class="center-align">
+              <pagination-controls (pageChange)="getMapList($event)"></pagination-controls>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

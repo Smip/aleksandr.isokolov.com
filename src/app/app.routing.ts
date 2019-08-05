@@ -10,6 +10,7 @@ const routes: Routes = [
     canActivateChild: [MetaGuard],
     children: [
       { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+      { path: 'map-editor', loadChildren: () => import('./map-editor/map-editor.module').then(m => m.MapEditorModule) },
     ],
   },
   {

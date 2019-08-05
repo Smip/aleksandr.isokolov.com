@@ -1,18 +1,23 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { TransferHttpModule } from '@gorniv/ngx-universal';
 
 import { LayoutsModule } from './layouts/layouts.module';
-import { SharedMetaModule } from './shared-meta';
 import { NgxMaterialize } from '@smip/ngx-materialize';
+import { MomentPipe } from '@shared/pipes/moment.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  // imports: [NgxMaterialize],
-  exports: [LayoutsModule, SharedMetaModule, TransferHttpModule, NgxMaterialize],
+  declarations: [MomentPipe],
+  imports: [],
+  exports: [
+    LayoutsModule,
+    TransferHttpModule,
+    ReactiveFormsModule,
+    NgxMaterialize,
+    MomentPipe,
+  ],
   providers: [],
 })
 export class SharedModule {
-  static forRoot(): ModuleWithProviders {
-    return { ngModule: SharedModule };
-  }
 }

@@ -1,0 +1,35 @@
+h2 {
+  margin: 0;
+}
+
+.map {
+  height: 100vh;
+}
+
+.left-panel {
+  max-height: 100vh;
+  overflow-y: auto;
+  .row {
+    margin-bottom: 0;
+  }
+  .btn-flat {
+    padding: 0 8px;
+    margin: 0 -0.75rem;
+  }
+}
+
+.collapsible-body {
+  padding: 1rem;
+}
+
+.collapsible {
+  box-shadow: none;
+}
+
+label.checkbox {
+  left: 0 !important;
+  transform: translateY(6px);
+  cursor: pointer;
+  //color: $button-flat-color;
+}
+

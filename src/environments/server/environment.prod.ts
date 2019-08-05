@@ -3,4 +3,5 @@ export const environment = {
   isServer: true,
   // for prerender
   host: 'http://localhost:4000',
+  apiURL: 'http://aleksandr.isokolov.com/api/',
 };

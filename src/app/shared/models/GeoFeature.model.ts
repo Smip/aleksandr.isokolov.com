@@ -1,9 +1,9 @@
-import * as geojson from 'geojson';
+import { GeoJsonObject } from 'geojson';
 
 export class Feature {
   constructor(
     public name: string,
-    public feature: geojson.FeatureCollection,
+    public feature: GeoJsonObject,
     public layerId?: number,
     public id?: number,
   ) {

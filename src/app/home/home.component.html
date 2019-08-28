@@ -1,19 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col s12 m6 l4">
+    <div class="col s12 m6 l4" *ngFor="let menuItem of menu">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <a routerLink="/map-editor">
-            <img src="../../assets/map-editor.jpg">
+          <a [routerLink]="menuItem.routerLink">
+            <img [src]="menuItem.previewSrc" class="menu-preview-img" *ngIf="menuItem.previewSrc">
+            <img src="../../assets/icons/512.png" class="menu-preview-img" *ngIf="!menuItem.previewSrc">
           </a>
         </div>
         <div class="card-content">
-          <a routerLink="/map-editor">
+          <a [routerLink]="menuItem.routerLink">
             <span class="card-title activator grey-text text-darken-4">
-              Map editor
+              {{menuItem.name}}
             </span>
           </a>
-          <p>Map editor made on the Angular 8 & Leaflet. Works with Universal.</p>
+          <p>{{menuItem.description}}</p>
         </div>
       </div>
     </div>

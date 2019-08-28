@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 
 import { TransferHttpService } from '@gorniv/ngx-universal';
 import { MetaService } from '@ngx-meta/core';
@@ -8,9 +8,25 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styles: [':host{background-color: #eee;}'],
 })
 export class HomeComponent implements OnInit {
-  errorMessage: string;
+
+  menu: { name: string, previewSrc: string, description: string, routerLink: string }[] = [
+    {
+      name: 'Map editor',
+      previewSrc: '../../assets/map-editor.jpg',
+      description: 'Map editor made on the Angular 8 & Leaflet. Works with Universal.',
+      routerLink: '/map-editor',
+    },
+    {
+      name: 'D3 & Angular',
+      previewSrc: '../../assets/simple-d3.jpg',
+      description: 'Visualization data using Angular 8 & D3',
+      routerLink: '/d3',
+    },
+  ];
+
   constructor(
     @Inject(PLATFORM_ID) private _platformId: Object,
     private _http: TransferHttpService,
@@ -18,11 +34,9 @@ export class HomeComponent implements OnInit {
     private _universalStorage: UniversalStorage,
     // instead window.document
     @Inject(DOCUMENT) private _document: Document,
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
-    const t = window;
-    const t1 = document;
-    this._meta.setTag('description', 'Meta update from init');
   }
 }

@@ -1,1 +1,1 @@
-export const ROUTES = ['/', '/map-editor'];
+export const ROUTES = ['/', '/map-editor', '/d3'];

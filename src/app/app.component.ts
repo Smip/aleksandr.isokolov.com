@@ -8,6 +8,6 @@ import { MetaService } from '@ngx-meta/core';
 })
 export class AppComponent {
   constructor(private readonly meta: MetaService) {
-    this.meta.setTag('og:title', 'home ctor');
+    this.meta.setTag('og:title', 'Aleksandr Sokolov');
   }
 }

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-map-editor',
   templateUrl: './map-editor.component.html',
-  styleUrls: ['./map-editor.component.scss'],
+  styles: [':host{background-color: #eee;}'],
 })
 export class MapEditorComponent implements OnInit {
 

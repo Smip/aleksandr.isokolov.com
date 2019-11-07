@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col s12">
+    <a routerLink="/map-editor" class="waves-effect waves-teal btn-flat">
+      Back
+      <i class="material-icons left">arrow_back</i>
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel toolbar">
+      <div class="row no-margin">
+        <div class="col m6 s12">
+          <h2>{{mapName}}
+            <small *ngIf="mapLocked">(Map is locked from changes)</small>
+          </h2>
+        </div>
+        <div class="col m6 s24">
+          <div class="right">
+            <button
+              class="btn waves-effect waves-light"
+              type="button"
+            >
+              Save
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 l3 m4">
+    <div class="card-panel left-panel">
+
+    </div>
+  </div>
+  <div class="col s12 m8 l9">
+    <div class="card-panel" style="padding: 0;">
+      <div class="map">
+      </div>
+    </div>
+  </div>
+</div>

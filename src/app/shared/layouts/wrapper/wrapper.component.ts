@@ -11,10 +11,7 @@ import { slider } from '@shared/animations/route-animations';
 })
 export class WrapperComponent {
   prepareRoute(outlet: RouterOutlet) {
-    // console.log(outlet.isActivated, outlet.activatedRoute);
-    // console.log(outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']);
+    console.log(outlet);
     return outlet.isActivated ? outlet.activatedRoute : '';
-    // return outlet.activatedRoute ;
-    // return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }

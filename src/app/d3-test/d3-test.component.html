@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <a [routerLink]="'/'" class="waves-effect waves-teal btn blue-grey darken-4">
+        Home
+        <i class="material-icons left">home</i>
+      </a>
+    </div>
+  </div>
+  <div class="card-panel">
+    <h1>D3 & Angular</h1>
+    <h2>Simple bars based on div</h2>
+    <app-simple-div-bars></app-simple-div-bars>
+    <h2>Simple bars based on svg</h2>
+    <app-simple-svg-bars></app-simple-svg-bars>
+    <h2>Simple vertical bars</h2>
+    <app-simple-svg-vertital-bars></app-simple-svg-vertital-bars>
+    <h2>Simple geo visualisation from <a [routerLink]="['/map-editor', 'vienna-1564936894']">map editor</a></h2>
+    <app-simple-geo></app-simple-geo>
+    <!--<app-brush-zoom></app-brush-zoom>-->
+  </div>
+</div>

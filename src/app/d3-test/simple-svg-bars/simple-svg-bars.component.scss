@@ -1,0 +1,10 @@
+:host ::ng-deep svg {
+  rect {
+    fill: #0d47a1;
+  }
+
+  text {
+    fill: white;
+    text-anchor: end;
+  }
+}

@@ -1,4 +1,7 @@
 RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit|Facebot|Surp|bot|spider|crawler|Ezooms|MJ12|Nutch|Sogou|Yandex|googlebot|InfoSeek|msnbot) [NC]
+RewriteRule ^(.*)$ /static/$1 [L,QSA]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.html [L,QSA]

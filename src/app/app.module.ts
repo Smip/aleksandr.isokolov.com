@@ -36,7 +36,7 @@ export function initLanguage(translateService: TranslatesService): Function {
     SharedMetaModule,
     BrowserAnimationsModule,
     CookieModule.forRoot(),
-    SharedModule,
+    SharedModule
   ],
   declarations: [AppComponent],
   providers: [

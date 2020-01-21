@@ -12,6 +12,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { InlineStyleModule } from './inline-style/inline-style.module';
 import { InlineStyleComponent } from './inline-style/inline-style.component';
 import { StateTransferInitializerModule } from '@nguniversal/common';
+import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
+// @ts-ignore
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
+import { environment } from '../environments/environment';
 
 // import { ServiceWorkerModule } from '@angular/service-worker';
 
@@ -29,6 +34,8 @@ export function getRequest(): any {
     TranslatesBrowserModule,
     InlineStyleModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: false }),
+    environment.production ? [] : AkitaNgDevtools.forRoot(),
+    AkitaNgRouterStoreModule.forRoot(),
   ],
   providers: [
     {
@@ -37,6 +44,7 @@ export function getRequest(): any {
       useFactory: getRequest,
     },
     { provide: 'ORIGIN_URL', useValue: location.origin },
+    { provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }},
   ],
 })
 export class AppBrowserModule {}

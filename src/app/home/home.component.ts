@@ -25,6 +25,12 @@ export class HomeComponent implements OnInit {
       description: 'Visualization data using Angular 8 & D3',
       routerLink: '/d3',
     },
+    {
+      name: 'Akita State Management',
+      previewSrc: '../../assets/akita.jpg',
+      description: 'ToDo with Akita State Management',
+      routerLink: '/akita',
+    },
   ];
 
   constructor(

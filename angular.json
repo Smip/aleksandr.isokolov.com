@@ -22,8 +22,7 @@
               "src/robots.txt",
               "src/manifest.json"
             ],
-            "styles": [
-            ],
+            "styles": [],
             "scripts": [
               "./node_modules/materialize-css/dist/js/materialize.js",
               "./node_modules/moment/min/moment.min.js",
@@ -87,8 +86,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
-            "styles": [
-            ],
+            "styles": [],
             "assets": [
               "src/assets",
               "src/favicon.ico",
@@ -178,5 +176,8 @@
     "@schematics/angular:directive": {
       "prefix": "app"
     }
+  },
+  "cli": {
+    "defaultCollection": "@datorama/akita"
   }
 }

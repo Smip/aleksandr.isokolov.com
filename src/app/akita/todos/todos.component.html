@@ -1,0 +1,5 @@
+<div class="row">
+  <div class="col s12 m6" *ngFor="let todo of todos; trackBy: trackByFn">
+    <app-todo [todo]="todo" (delete)="delete.emit($event)" (complete)="complete.emit($event)"></app-todo>
+  </div>
+</div>

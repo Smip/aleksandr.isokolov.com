@@ -13,6 +13,7 @@ const routes: Routes = [
       { path: 'map-editor', loadChildren: () => import('./map-editor/map-editor.module').then(m => m.MapEditorModule) },
       { path: 'd3', loadChildren: () => import('./d3-test/d3-test.module').then(m => m.D3TestModule) },
       { path: 'akita', loadChildren: () => import('./akita/akita.module').then(m => m.AkitaModule) },
+      { path: 'ngrx', loadChildren: () => import('./ngrx/ngrx.module').then(m => m.NgrxModule) },
       { path: '**', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule) },
     ],
   },

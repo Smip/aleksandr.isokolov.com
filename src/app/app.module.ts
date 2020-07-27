@@ -21,6 +21,13 @@ import { ErrorInterceptor } from '@shared/interceptors/error.interceptor';
 import { AuthGuard } from '@shared/guards/auth.guard';
 import { UnAuthGuard } from '@shared/guards/un-auth.guard';
 import { SharedMetaModule } from '@shared/shared-meta';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { AppEffects } from './store/app.effects';
+import { metaReducers } from './store/reducers';
+import { reducer } from './ngrx/store/todo.reducer';
 
 export function initLanguage(translateService: TranslatesService): Function {
   return (): Promise<any> => translateService.initLanguage();
@@ -36,7 +43,20 @@ export function initLanguage(translateService: TranslatesService): Function {
     SharedMetaModule,
     BrowserAnimationsModule,
     CookieModule.forRoot(),
-    SharedModule
+    SharedModule,
+    EffectsModule.forRoot([
+      AppEffects
+    ]),
+    StoreModule.forRoot({
+      todos: reducer
+    }, {
+      metaReducers, 
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true,
+      }
+    }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   declarations: [AppComponent],
   providers: [

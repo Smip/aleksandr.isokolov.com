@@ -31,6 +31,12 @@ export class HomeComponent implements OnInit {
       description: 'ToDo with Akita State Management',
       routerLink: '/akita',
     },
+    {
+      name: 'NgRx State Management',
+      previewSrc: '../../assets/ngrx.jpg',
+      description: 'ToDo with NgRx State Management',
+      routerLink: '/ngrx',
+    },
   ];
 
   constructor(

@@ -1,0 +1,18 @@
+<div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+    <span class="card-title">
+      <i class="material-icons lime-text text-accent-3" *ngIf="todo.completed">check</i>
+      {{ todo.title }}
+    </span>
+    <button type="button" class="waves-effect waves-teal btn-flat white-text"  (click)="delete.emit(todo.id)">
+      Delete
+    </button>
+    <button type="button" class="waves-effect waves-teal btn-flat white-text" *ngIf="!todo.completed" (click)="markAsCompleted(todo)">
+      Complete
+    </button>
+  </div>
+  <!--            <div class="card-action">-->
+  <!--              <a href="#">This is a link</a>-->
+  <!--              <a href="#">This is a link</a>-->
+  <!--            </div>-->
+</div>

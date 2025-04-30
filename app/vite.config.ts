@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
   return {
     root: __dirname,
     cacheDir: `../node_modules/.vite`,
-    
+
     build: {
       outDir: '../dist/./app/client',
       reportCompressedSize: true,
@@ -25,12 +25,16 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [
-      
+
       tailwindcss(),
-      
-      
-      analog(),
-      
+
+
+      analog({
+        vite: {
+          // inlineStylesExtension: 'scss',
+        },
+      }),
+
       nxViteTsPaths(),
     ],
     test: {

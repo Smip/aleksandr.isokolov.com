@@ -1,18 +1,12 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # compiled output
-/dist
-/doc
-/tmp
-/out-tsc
-/dist-server
-/static
-server.js
-prerender.js
+dist
+tmp
+out-tsc
 
 # dependencies
-/node_modules
-package-lock.json
+node_modules
 
 # IDEs and editors
 /.idea
@@ -41,7 +35,8 @@ testem.log
 /typings
 
 # System Files
-**/.DS_Store
+.DS_Store
 Thumbs.db
-prerender.js.map
-server.js.map
+
+.nx/cache
+.nx/workspace-data

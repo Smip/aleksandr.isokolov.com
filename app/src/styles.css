@@ -2,6 +2,7 @@
 
 
 html, body {
-display: block;
-height: 100%;
+  display: block;
+  height: 100%;
+  font-size: calc(10px + 0.33vw);
 }

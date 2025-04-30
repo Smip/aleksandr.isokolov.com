@@ -6,7 +6,7 @@ COPY . .
 
 RUN npm install
 
-RUN npm nx run app:build:production
+RUN npm run build
 
 FROM nginx:alpine
 

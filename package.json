@@ -2,7 +2,9 @@
   "name": "aleksandr.isokolov.com",
   "version": "19.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx run app:build:production"
+  },
   "private": true,
   "dependencies": {
     "@analogjs/content": "^1.16.0",

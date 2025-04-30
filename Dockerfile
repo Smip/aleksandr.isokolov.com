@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm ci
+RUN npm install
 
 RUN npm nx run app:build:production
 
